@@ -22,11 +22,11 @@ body {
     border-radius: 10px;
 }
 
-.logo {
+.nav-logo {
     height: 50px;
     width: 200px;
     margin: 10px 0px 0px 10px;
-
+    cursor: pointer;
 }
 
 .buttons {
@@ -52,6 +52,22 @@ body {
     background-color: rgb(65, 65, 65);
     color: white;
     cursor: pointer;
+    position:relative;
+    overflow:hidden;
+}
+
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color:rgb(37, 37, 37)
+}
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 
 .lpl {
