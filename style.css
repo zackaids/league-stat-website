@@ -52,23 +52,24 @@ body {
     background-color: rgb(65, 65, 65);
     color: white;
     cursor: pointer;
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
 }
 
-span.ripple {
+/* .ripple {
     position: absolute;
     border-radius: 50%;
     transform: scale(0);
     animation: ripple 600ms linear;
-    background-color:rgb(37, 37, 37)
+    background-color: rgb(37, 37, 37)
 }
+
 @keyframes ripple {
     to {
         transform: scale(4);
         opacity: 0;
     }
-}
+} */
 
 .lpl {
     border-right: 1px black solid;
@@ -98,4 +99,27 @@ span.ripple {
     border-radius: 10px;
     margin-top: 30px;
     padding-bottom: 5px;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table-container td {
+    padding: 10px 10px;
+}
+
+.table-container thead {
+    border-bottom: 1px solid black;
+}
+
+.table-container tbody tr td:not(:last-child),
+.table-container thead tr th:not(:last-child) {
+    border-right: 1px solid black;
 }
