@@ -42,3 +42,33 @@ function clickImg() {
 // for (const rippbleButton of rippleButtons) {
 //     document.addEventListener("click", createRipple);
 // }
+
+
+/*
+name,
+teams,
+total games played,
+kda,
+kills per match
+kill percentage%
+DPM
+*/
+
+
+const url = "https://league-of-legends-esports.p.rapidapi.com";
+async function getPlayerTeams() {
+    const response = await fetch(`${url}/teams`, {
+        headers: {
+            'X-RapidAPI-Key': '3c27a0802amshd4a0aeac63bf17dp170384jsn79edec9cb087',
+            'X-RapidAPI-Host': 'league-of-legends-esports.p.rapidapi.com'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+};
+getPlayerTeams();
+
+// CRUD: CREATE-READ-UPDATE-DELETE
+// create post
+// read post
+// update delete
