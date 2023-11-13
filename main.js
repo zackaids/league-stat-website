@@ -16,6 +16,8 @@ function clickImg() {
     document.location.pathname = '/index.html'
 }
 
+
+
 // function createRipple(event) {
 
 // }
@@ -55,18 +57,20 @@ DPM
 */
 
 
-const url = "https://league-of-legends-esports.p.rapidapi.com";
-async function getPlayerTeams() {
-    const response = await fetch(`${url}/teams`, {
+// query parameters = ? in the url
+
+const url = "https://oe.datalisk.io/stats/teams/byTournament?mapSide=all&winLoss=all&dateStart=2023-06-13&dateEnd=2023-07-22&tournament=LCS%2F2023%20Season%2FSummer%20Season&columnSet";
+async function getLcsStandings() {
+    const response = await fetch(url, {
         headers: {
-            'X-RapidAPI-Key': '3c27a0802amshd4a0aeac63bf17dp170384jsn79edec9cb087',
-            'X-RapidAPI-Host': 'league-of-legends-esports.p.rapidapi.com'
+            'X-Api-Key': 'f561197a-82ea-4e54-acd2-386979018a7a'
         }
     });
     const data = await response.json();
-    console.log(data);
-};
-getPlayerTeams();
+}
+
+// getLcsStandings();
+
 
 // CRUD: CREATE-READ-UPDATE-DELETE
 // create post

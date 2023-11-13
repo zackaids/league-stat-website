@@ -111,6 +111,10 @@ table {
     border-collapse: collapse;
 }
 
+/* .table-container tbody {
+    vertical-align: top;
+} */
+
 .table-container td {
     padding: 10px 10px;
 }
@@ -122,4 +126,23 @@ table {
 .table-container tbody tr td:not(:last-child),
 .table-container thead tr th:not(:last-child) {
     border-right: 1px solid black;
+}
+
+.lcs-sidebar-buttons {
+    border: 1px solid black;
+    margin-right: 20px;
+
+    background-color: grey;
+
+}
+
+.lcs-sidebar-buttons div {
+    border-bottom: 1px black solid;
+    padding: 5px;
+}
+
+.lcs-standing-title {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    font-size: 40px;
 }
